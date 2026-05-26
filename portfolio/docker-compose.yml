@@ -1,0 +1,13 @@
+services:
+  site:
+    build: .
+    ports:
+      - "8080:80"
+   
+ 
+  tests:
+    build: ./tests
+    depends_on:
+      - site
+    environment:
+      BASE_URL: http://site:80  
