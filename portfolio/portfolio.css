@@ -1,0 +1,37 @@
+body {
+  background: url(WhatsApp\ Image\ 2026-03-13\ at\ 9.11.16\ AM.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.wrapper {
+  overflow: hidden;
+  max-width: 390px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.wrapper .title-box {
+  display: flex;
+  width: 200%;
+}
+.wrapper .title {
+  color: antiquewhite;
+  width: 50%;
+}
+.wrapper1 {
+  overflow: hidden;
+  max-width: 900px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.wrapper2 {
+  max-width: 3000px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(25px);
+}
