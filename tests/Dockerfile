@@ -1,9 +1,8 @@
-FROM mcr.microsoft.com/playwright:latest
+FROM mcr.microsoft.com/playwright:v1.60.0-jammy
 
 WORKDIR /app
 
 COPY tests/package*.json ./
-
 RUN npm install
 
 COPY tests .
