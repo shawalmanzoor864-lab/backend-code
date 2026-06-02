@@ -1,13 +1,16 @@
+version: '3.8'
+
 services:
   site:
-    build: .
+    build: ./portfolio
     ports:
       - "8080:80"
-   
- 
+    container_name: portfolio-site
+
   tests:
     build: ./tests
     depends_on:
       - site
     environment:
-      BASE_URL: http://site:80  
+      BASE_URL: http://site:80
+    container_name: portfolio-tests
