@@ -18,14 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Start site and run tests
+      - name: Run tests
         run: docker compose up --build --exit-code-from tests
-        working-directory: backend-code
 
   deploy:
     needs: test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: backend-code/portfolio
+          path: portfolio
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

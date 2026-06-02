@@ -1,16 +1,16 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  site:
-    build: ./portfolio
+  web:
+    build: .
     ports:
-      - "8080:80"
-    container_name: portfolio-site
+      - "80:80"
 
   tests:
-    build: ./tests
+    build:
+      context: .
+      dockerfile: tests/Dockerfile
     depends_on:
-      - site
+      - web
     environment:
-      BASE_URL: http://site:80
-    container_name: portfolio-tests
+      - BASE_URL=http://web:80
